@@ -2,32 +2,44 @@
 /**
  * Write a description of class ExpenseManager here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Alyssa Novelli)
+ * @version (October 29, 2025)
  */
+import java.util.ArrayList;
+import java.util.Scanner;
 public class ExpenseManager
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class ExpenseManager
-     */
-    public ExpenseManager()
-    {
-        // initialise instance variables
-        x = 0;
+    private ArrayList<Expense> expenses;
+    public ExpenseManager() {
+        expenses = new ArrayList<>();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void addExpenses (Scanner input) {
+        System.out.print("Enter expense amount: ");
+        double amount = input.nextDouble();
+        input.nextLine();
+        
+        System.out.println("Enter expense category: ");
+        String category = input.nextLine();
+        
+        System.out.print("Enter description: ");
+        String description = input.nextLine();
+        
+        Expense newExpense = new Expense(amount, category, description);
+        
+        expenses.add(newExpense);
+        System.out.println("Expense added successfully.");
     }
+    public void viewExpenses () {
+        if (expenses.isEmpty()) {
+            System.out.println("No expenses recorded yet.");
+            return;
+        }
+        System.out.println("\n=== Expense List ===");
+        
+        for (int i = 0; i < expenses.size(); i++) {
+            Expense e = expenses.get(i);
+            System.out.println((i + 1) + ". " + e);
+        }
+    }
+    
 }
