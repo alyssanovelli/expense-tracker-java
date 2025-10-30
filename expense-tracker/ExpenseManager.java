@@ -41,5 +41,22 @@ public class ExpenseManager
             System.out.println((i + 1) + ". " + e);
         }
     }
-    
+    public void deleteExpenses(Scanner input) {
+        if (expenses.isEmpty()) {
+            System.out.println("No expenses to delete.");
+            return;
+        }
+        viewExpenses();
+        
+        System.out.print("Enter the number of the expense to delete: ");
+        int index = input.nextInt();
+        input.nextLine();
+        
+        if (index < 1 || index > expenses.size()) {
+            System.out.println("Invalid expense number.");
+        } else {
+            Expense removed = expenses.remove(index - 1);
+            System.out.println("Deleted : " + removed);
+        }
+    }
 }

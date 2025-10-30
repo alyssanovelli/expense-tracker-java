@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class main here.
  *
@@ -32,7 +31,7 @@ public class Main
                     break;
                 case 3:
                     manager.deleteExpenses(input);
-                    break
+                    break;
                 case 4: 
                     running = false;
                     break;

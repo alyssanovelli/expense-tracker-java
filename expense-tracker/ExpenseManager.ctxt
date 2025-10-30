@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ExpenseManager
+comment1.params=
+comment1.target=ExpenseManager()
+comment2.params=input
+comment2.target=void\ addExpenses(java.util.Scanner)
+comment3.params=
+comment3.target=void\ viewExpenses()
+comment4.params=input
+comment4.target=void\ deleteExpenses(java.util.Scanner)
+numComments=5

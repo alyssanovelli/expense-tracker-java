@@ -2,32 +2,31 @@
 /**
  * Write a description of class Expense here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Alyssa Novelli)
+ * @version (October 30, 2025)
  */
 public class Expense
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Expense
-     */
-    public Expense()
-    {
-        // initialise instance variables
-        x = 0;
+    private double amount;
+    private String category;
+    private String description;
+    
+    public Expense(double amount, String category, String description) {
+        this.amount = amount;
+        this.category = category;
+        this.description = description;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public double getAmount() {
+        return amount;
     }
+    public String getCategory() {
+        return category;
+    }
+    public String getDescription() {
+        return description;
+    }
+    
+    public String toString() {
+        return category + " - $" + String.format("%.2f", amount) + " - " + description;
+    } 
 }

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Expense
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Expense\ here.\r\n\r\n\ @author\ (Alyssa\ Novelli)\r\n\ @version\ (October\ 30,\ 2025)\r\n
+comment1.params=amount\ category\ description
+comment1.target=Expense(double,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=double\ getAmount()
+comment3.params=
+comment3.target=java.lang.String\ getCategory()
+comment4.params=
+comment4.target=java.lang.String\ getDescription()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
